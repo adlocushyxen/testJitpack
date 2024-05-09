@@ -3,6 +3,31 @@ plugins {
     id 'maven-publish'
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                //from components.release
+                from components.findByName('release')
+                groupId = 'com.hyxen.testjitpack'
+                artifactId = 'glcCode'
+                version = '1.0.1'
+            }
+        }
+    }
+}
+/*
+publishing {
+    publications {
+        release(MavenPublication) {
+            from components.javaLibrary
+            groupId = 'com.hyxen.testjitpack'
+            artifactId = 'glcCode'
+            version = '1.0.1'
+        }
+    }
+}*/
+
 android {
     namespace 'com.hyxen.glccode'
     compileSdk 33
@@ -35,6 +60,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
 
+/*
 afterEvaluate {
     android.libraryVariants.each {variant->
         publishing.publications.create(variant.name, MavenPublication){
@@ -44,4 +70,4 @@ afterEvaluate {
             version = '1.0.0'
         }
     }
-}
+}*/
