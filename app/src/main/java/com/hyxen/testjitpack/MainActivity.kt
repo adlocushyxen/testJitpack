@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.hyxen.glccode.GlcCodeUtils
 import com.hyxen.testjitpack.ui.theme.TestJitpackTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,6 +27,8 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        println(GlcCodeUtils.add(1, 2))
     }
 }
 

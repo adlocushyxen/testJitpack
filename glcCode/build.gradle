@@ -7,11 +7,11 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                //from components.release
+//                from components.release
                 from components.findByName('release')
                 groupId = 'com.hyxen.testjitpack'
                 artifactId = 'glcCode'
-                version = '1.0.3'
+                version = 'v1.0.4'
             }
         }
     }
@@ -58,6 +58,11 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+
+task generateSourcesJar(type: Jar){
+    from android.sourceSets.main.java.srcDirs
+    archiveBaseName  = 'sources'
 }
 
 /*
