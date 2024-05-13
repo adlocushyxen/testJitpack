@@ -1,8 +1,8 @@
 # configuration file for building snapshots and releases with jitpack.io
 jdk:
   - openjdk17
-install:
-  - echo "Running a custom install command"
-  - ./gradlew clean install -xtest
+#install:
+#  - echo "Running a custom install command"
+#  - ./gradlew clean install -xtest
 env:
   MYVAR: "custom environment variable"
