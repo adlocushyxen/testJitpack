@@ -65,5 +65,5 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
-    implementation 'com.github.adlocushyxen:testJitpack:v1.0.9'
+    implementation 'com.github.adlocushyxen:testJitpack:v1.0.8'
 }
